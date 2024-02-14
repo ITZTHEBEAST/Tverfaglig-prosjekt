@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stil.css">
 </head>
 <body>
-$END$
+
+<div class="login-container">
+    <h2>Login</h2>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+    </div>
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+
+        if (username === '' || password === '') {
+            alert('Please enter both username and password.');
+        } else {
+            window.location.href = 'welcome.html';
+        }
+    }
+</script>
+
 </body>
 </html>
