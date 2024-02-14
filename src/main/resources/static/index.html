@@ -19,13 +19,13 @@
         <input type="password" id="password" placeholder="Enter your password">
     </div>
     <button onclick="login()">Login</button>
+    <p>Not registered? <a href="register.html">Register here</a></p>
 </div>
 
 <script>
     function login() {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-
 
         if (username === '' || password === '') {
             alert('Please enter both username and password.');
