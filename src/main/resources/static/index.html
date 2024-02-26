@@ -3,37 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="stil.css">
 </head>
 <body>
-
-<div class="login-container">
-    <h2>Login</h2>
-    <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter your username">
-    </div>
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter your password">
-    </div>
-    <button onclick="login()">Login</button>
-    <p>Not registered? <a href="register.html">Register here</a></p>
-</div>
-
-<script>
-    function login() {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-
-        if (username === '' || password === '') {
-            alert('Please enter both username and password.');
-        } else {
-            window.location.href = 'welcome.html';
-        }
-    }
+<div id="message-container"></div>
+<form id="message-form">
+    <input type="text" id="sender" placeholder="Your Name" required>
+    <textarea id="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+<script src="server.js">
 </script>
-
 </body>
 </html>
