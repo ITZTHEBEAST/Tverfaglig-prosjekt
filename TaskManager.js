@@ -125,4 +125,5 @@ document.addEventListener("DOMContentLoaded", function () {
         taskItem.style.display = "none";
       }
     });
+    
   }
