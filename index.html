@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Page Title</title>
+    <link rel="stylesheet" type="text/css" href="base.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Din oppgave liste</h3>
+
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Skriv inn oppgave" />
+        <button class="add-btn">Add Task</button>
+      </form>
+
+      <ul class="task-items"></ul>
+
+      <input type="text" id="search" placeholder="Søk etter oppgave" />
+      <div class="err"></div>
+    </div>
+    <button class="clear-tasks">Clear All Tasks</button>
+
+    <script src="taskmanager.js"></script>
+  </body>
+</html>
