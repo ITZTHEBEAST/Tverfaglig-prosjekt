@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Page Title</title>
-    <link rel="stylesheet" type="text/css" href="base.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h3>Din oppgave liste</h3>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  
 
-      <form id="task-form">
-        <input type="text" id="task-input" placeholder="Skriv inn oppgave" />
-        <button class="add-btn">Add Task</button>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto my-8 p-8 bg-white shadow-md rounded">
+      <h3 class="text-blue-500 text-lg mb-4">Din oppgave liste</h3>
+
+      <form id="task-form" class="flex items-center mb-4">
+        <input type="text" id="task-input" placeholder="Skriv inn oppgave" class="flex-1 p-2 border border-blue-500 rounded-l" />
+        <button class="add-btn bg-green-500 text-white px-4 py-2 rounded-r transition duration-300 transform hover:scale-105">Add Task</button>
       </form>
 
       <ul class="task-items"></ul>
 
-      <input type="text" id="search" placeholder="Søk etter oppgave" />
-      <div class="err"></div>
+      <input type="text" id="search" placeholder="Søk etter oppgave" class="p-2 border border-gray-300 rounded mb-4" />
+      <div class="err text-red-500 hidden mb-2">Error message</div>
     </div>
-    <button class="clear-tasks">Clear All Tasks</button>
+    <button class="clear-tasks bg-red-500 text-white px-4 py-2 rounded mx-4" style="transition: background-color 0.3s ease; transform-origin: center; cursor: pointer;" onmouseover="this.style.backgroundColor='#c0392b'" onmouseout="this.style.backgroundColor='#e74c3c'">Clear All Tasks</button>
 
-    <script src="taskmanager.js"></script>
-    <p>tests</p>
+    <script src="TaskManager.js"></script>
   </body>
 </html>

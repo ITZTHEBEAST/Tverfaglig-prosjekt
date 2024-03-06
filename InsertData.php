@@ -9,8 +9,7 @@ $username = "fredrik";
 $password = "Skole123";
 $dbname = "MELDINGER";
 
-$conn = new mysqli('172.20.128.69', 'fredrik', 'Skole123', $dbname);
-
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -19,16 +18,39 @@ if ($conn->connect_error) {
 
 // Check if the form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve task text from the form
-    $taskText = $_POST["taskText"];
+    if (isset($_POST["taskText"])) {
+        // Retrieve task text from the form
+        $taskText = $_POST["taskText"];
 
-    // Insert task into the database
-    $sql = "INSERT INTO tasks (taskText) VALUES ('$taskText')";
-    
-    if ($conn->query($sql) === TRUE) {
-        $response = array('status' => 'success', 'message' => 'Task added successfully');
+        // Insert task into the database using prepared statement
+        $sql = "INSERT INTO tasks (taskText) VALUES (?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $taskText);
+
+        if ($stmt->execute()) {
+            $response = array('status' => 'success', 'message' => 'Task added successfully', 'taskText' => $taskText, 'taskId' => $stmt->insert_id);
+        } else {
+            $response = array('status' => 'error', 'message' => 'Error adding task: ' . $stmt->error);
+        }
+
+        $stmt->close();
+    } elseif (isset($_POST["taskId"])) {
+        // Delete task from the database using prepared statement
+        $taskId = $_POST["taskId"];
+
+        $sql = "DELETE FROM tasks WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $taskId);
+
+        if ($stmt->execute()) {
+            $response = array('status' => 'success', 'message' => 'Task deleted successfully');
+        } else {
+            $response = array('status' => 'error', 'message' => 'Error deleting task: ' . $stmt->error);
+        }
+
+        $stmt->close();
     } else {
-        $response = array('status' => 'error', 'message' => 'Error adding task: ' . $conn->error);
+        $response = array('status' => 'error', 'message' => 'Invalid request');
     }
 
     // Output response as JSON
