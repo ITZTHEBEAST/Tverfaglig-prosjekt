@@ -30,9 +30,41 @@ Dette prosjektet er laget for å være brukervennlig og hjelpe deg med å admini
 
 **4. Generelle Spørsmål:**
    - Hvordan opplevde du programmet generelt?
+
+
+
+
+
    - Noen tanker om design og brukervennlighet?
    - Er det noe du føler mangler?
 
 **5. Avslutning:**
    - Vil du bruke dette programmet for oppgaveadministrasjon?
    - Noen siste tilbakemeldinger eller endringsforslag?
+
+
+
+# Brukertesting:
+### *Gutt (19 år):*
+
+Legge til ny oppgave:
+
+Kommentar: "Det var enkelt å legge til en ny oppgave. Jeg fant 'Legg til oppgave'-knappen umiddelbart. Kanskje vurdér å legge til en snarvei for å raskt åpne dette fra hvor som helst."
+Se gjennom oppgaveliste:
+
+Kommentar: "Navigeringen var grei, men det ville vært nyttig med en måte å sortere oppgavene på forskjellige måter. Jeg liker å ha dem organisert på dato eller prioritet."
+Slette oppgave:
+
+Kommentar: "Prosessen for å slette oppgaver var tydelig, men en bekreftelsesmelding ville være nyttig. Jeg har en tendens til å trykke for raskt, og det er lett å gjøre feil."
+Generelle Spørsmål:
+
+Kommentar: "Generelt sett likte jeg programmet. Kanskje legg til noen farger for å gjøre det mer levende. Jeg ville definitivt brukt dette for oppgavehåndtering."
+
+
+
+# Kilder
+
+GitHub in Ubuntu - https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
+
+PhP - https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu#step-3-installing-php
+
