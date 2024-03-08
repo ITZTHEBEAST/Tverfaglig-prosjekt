@@ -1,5 +1,6 @@
-// TaskManager.js
 
+
+// Funksjon for å lagre oppgaver lokalt
 function saveTasksToLocalStorage() {
     const tasks = [];
     const taskItems = document.querySelectorAll(".task");
@@ -11,12 +12,12 @@ function saveTasksToLocalStorage() {
         tasks.push({ taskId, taskText });
     });
 
-    // Save tasks to local storage
+    // Lagre oppgaver lokalt
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    loadTasksFromDatabase(); // Load tasks from the database initially
+    loadTasksFromDatabase(); // Hent oppgaver fra databasen ved start
 });
 
 const addBtn = document.querySelector(".add-btn");
@@ -28,15 +29,15 @@ const searchInput = document.getElementById("search");
 clearAll.addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Remove all tasks from the UI and the database
+    // Fjern alle oppgaver fra UI og databasen
     const tasks = document.querySelectorAll(".task");
     tasks.forEach(task => {
         task.remove();
-        deleteTaskFromDatabase(task.dataset.taskId); // Delete the task from the database
+        deleteTaskFromDatabase(task.dataset.taskId); // Slett oppgaven fra databasen
     });
 
-    updateSearchFilter(); // Update search filter after clearing all tasks
-    saveTasksToLocalStorage(); // Save tasks to local storage after clearing all tasks
+    updateSearchFilter(); // Oppdater søkefilteret etter å ha fjernet alle oppgaver
+    saveTasksToLocalStorage(); // Lagre oppgaver lokalt etter å ha fjernet alle oppgaver
 });
 
 addBtn.addEventListener("click", function (e) {
@@ -44,7 +45,7 @@ addBtn.addEventListener("click", function (e) {
     const taskText = taskInput.value.trim();
 
     if (taskText !== "") {
-        // Send data to the server using Fetch API to add a new task to the database
+        // Send data til serveren ved hjelp av Fetch API for å legge til en ny oppgave i databasen
         fetch("InsertData.php", {
             method: "POST",
             headers: {
@@ -56,10 +57,10 @@ addBtn.addEventListener("click", function (e) {
             .then(data => {
                 console.log("Server Response:", data);
                 if (data.status === 'success') {
-                    // If the task is added successfully, create and append the task element
+                    // Hvis oppgaven er lagt til, opprett og legg til oppgaveelementet
                     const newLi = createTaskElement(data.taskText, data.taskId);
                     taskList.appendChild(newLi);
-                    updateSearchFilter(); // Update search filter after adding a new task
+                    updateSearchFilter(); // Oppdater søkefilteret etter å ha lagt til en ny oppgave
                 } else {
                     console.error(data.message);
                 }
@@ -81,25 +82,26 @@ addBtn.addEventListener("click", function (e) {
 clearAll.addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Remove all tasks from the UI and the database
+    // Fjern alle oppgaver fra UI og databasen
     const tasks = document.querySelectorAll(".task");
     tasks.forEach(task => {
         task.remove();
-        deleteTaskFromDatabase(task.dataset.taskId); // Delete the task from the database
+        deleteTaskFromDatabase(task.dataset.taskId); // Slett oppgaven fra databasen
     });
 
-    updateSearchFilter(); // Update search filter after clearing all tasks
-    saveTasksToLocalStorage(); // Save tasks to local storage after clearing all tasks
+    updateSearchFilter(); // Oppdater søkefilteret etter å ha fjernet alle oppgaver
+    saveTasksToLocalStorage(); // Lagre oppgaver lokalt etter å ha fjernet alle oppgaver
 });
 
 searchInput.addEventListener("input", function () {
     updateSearchFilter();
 });
 
+// Funksjon for å opprette et oppgaveelement
 function createTaskElement(taskText, taskId) {
     const newLi = document.createElement("li");
     newLi.className = "task my-2 p-4 bg-white border rounded-md transition duration-300 hover:shadow-md";
-    newLi.dataset.taskId = taskId; // Set data-task-id attribute to store the task ID
+    newLi.dataset.taskId = taskId; // Sett data-task-id-attributtet for å lagre oppgave-ID-en
 
     const task = document.createElement("input");
     task.disabled = true;
@@ -108,12 +110,12 @@ function createTaskElement(taskText, taskId) {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn ml-2 p-2 bg-red-500 text-white rounded transition duration-300 transform hover:scale-105";
-    deleteBtn.innerText = "Delete";
+    deleteBtn.innerText = "Slett";
     deleteBtn.addEventListener("click", function () {
         newLi.remove();
-        deleteTaskFromDatabase(taskId); // Delete the task from the database
-        updateSearchFilter(); // Update search filter after deleting a task
-        saveTasksToLocalStorage(); // Save tasks to local storage after deleting a task
+        deleteTaskFromDatabase(taskId); // Slett oppgaven fra databasen
+        updateSearchFilter(); // Oppdater søkefilteret etter å ha slettet en oppgave
+        saveTasksToLocalStorage(); // Lagre oppgaver lokalt etter å ha slettet en oppgave
     });
 
     const completeBtn = document.createElement("button");
@@ -121,9 +123,9 @@ function createTaskElement(taskText, taskId) {
     completeBtn.innerText = "Ferdig";
     completeBtn.addEventListener("click", function () {
         newLi.remove();
-        deleteTaskFromDatabase(taskId); // Delete the task from the database
-        updateSearchFilter(); // Update search filter after completing a task
-        saveTasksToLocalStorage(); // Save tasks to local storage after completing a task
+        deleteTaskFromDatabase(taskId); // Slett oppgaven fra databasen
+        updateSearchFilter(); // Oppdater søkefilteret etter å ha fullført en oppgave
+        saveTasksToLocalStorage(); // Lagre oppgaver lokalt etter å ha fullført en oppgave
     });
 
     newLi.appendChild(task);
@@ -134,11 +136,12 @@ function createTaskElement(taskText, taskId) {
     return newLi;
 }
 
+// Funksjon for å hente oppgaver fra databasen
 function loadTasksFromDatabase() {
-    // Clear existing tasks
+    // Fjern eksisterende oppgaver
     taskList.innerHTML = '';
 
-    // Fetch tasks from the database and create task elements
+    // Hent oppgaver fra databasen og opprett oppgaveelementer
     fetch("GetData.php")
         .then(response => response.json())
         .then(data => {
@@ -157,8 +160,9 @@ function loadTasksFromDatabase() {
         });
 }
 
+// Funksjon for å slette oppgave fra databasen
 function deleteTaskFromDatabase(taskId) {
-    // Send data to the server using Fetch API to delete a task from the database
+    // Send data til serveren ved hjelp av Fetch API for å slette oppgave fra databasen
     fetch("DeleteData.php", {
         method: "POST",
         headers: {
@@ -178,21 +182,4 @@ function deleteTaskFromDatabase(taskId) {
         });
 }
 
-function updateSearchFilter() {
-    let searchedWord = searchInput.value.trim().toLowerCase();
-
-    const taskItems = document.querySelectorAll(".task");
-    taskItems.forEach((taskItem) => {
-        let taskText = taskItem
-            .querySelector(".taskDisabled")
-            .value.trim()
-            .toLowerCase();
-
-        // Check if the taskText contains the searchedWord
-        if (taskText.includes(searchedWord)) {
-            taskItem.style.display = "block";
-        } else {
-            taskItem.style.display = "none";
-        }
-    });
-}
+//
