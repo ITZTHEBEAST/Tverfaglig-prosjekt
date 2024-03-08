@@ -95,6 +95,28 @@ Kommentar: "Slettefunksjonen var grei, og selv om jeg ikke trengte en bekreftels
 
 Kommentar: "Jeg er veldig fornøyd med programmet! Det er allerede en effektiv løsning, men noen små visuelle forbedringer ville gjort det enda bedre. Totalt sett en fantastisk opplevelse!"
 
+### **Gutt 4 (24 år):**
+Legge til ny oppgave:
+
+Kommentar: "Prosessen for å legge til en ny oppgave var grei, men hva om det var et 'tips'-ikon som gir en kort forklaring når du holder musepekeren over det? Det ville være nyttig for nye brukere."
+
+**Se gjennom oppgaveliste:**
+
+Kommentar: "Navigasjonen gjennom oppgavelisten var ok, men jeg savnet noen organisasjonsalternativer. Kanskje en kalendervisning eller en måte å markere viktige oppgaver på."
+
+**Slette oppgave:**
+
+Kommentar: "Slettefunksjonen var grei, men en bekreftelsesmelding ville gi meg ekstra trygghet. Det er alltid godt å ha en ekstra sjekk."
+
+**Generelle Spørsmål:**
+
+Kommentar: "Totalt sett er programmet funksjonelt, men det kunne være mer visuelt tiltalende. Legg til litt mer designelementer for å gjøre det mer engasjerende."
+
+
+
+
+
+
 
 
 # Kilder
