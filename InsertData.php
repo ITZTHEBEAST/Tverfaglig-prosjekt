@@ -42,20 +42,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $taskId);
 
-        if ($stmt->execute()) {
-            $response = array('status' => 'success', 'message' => 'Task deleted successfully');
-        } else {
-            $response = array('status' => 'error', 'message' => 'Error deleting task: ' . $stmt->error);
-        }
-
-        $stmt->close();
-    } else {
-        $response = array('status' => 'error', 'message' => 'Invalid request');
-    }
+    
 
     // Output response as JSON
     header('Content-Type: application/json');
     echo json_encode($response);
+
+    if ($stmt->execute()) {
+        $response = array('status' => 'success', 'message' => 'Task deleted successfully');
+    } else {
+        $response = array('status' => 'error', 'message' => 'Error deleting task: ' . $stmt->error);
+    }
+
+    $stmt->close();
+    } else {
+        $response = array('status' => 'error', 'message' => 'Invalid request');
+    }
 }
 
 // Close the database connection
