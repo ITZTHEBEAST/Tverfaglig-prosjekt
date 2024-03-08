@@ -1,4 +1,5 @@
 # Om Prosjektet:
+### Ip 172.20.128.62
 
 Dette prosjektet er et praktisk task manager-program designet for å hjelpe deg med å organisere og håndtere oppgaver på en enkel måte. Her er en rask oversikt:
 
@@ -60,7 +61,7 @@ Generelle Spørsmål:
 
 Kommentar: "Generelt sett likte jeg programmet. Kanskje legg til noen farger for å gjøre det mer levende. Jeg ville definitivt brukt dette for oppgavehåndtering."
 
-### *Gutt 2 (21 år):*
+### *Gutt 2 (18 år):*
 **Legge til ny oppgave:**
 
 Kommentar: "Legge til en ny oppgave var enkelt, men det ville vært nyttig med litt mer veiledning, spesielt for nye brukere som ikke er vant til lignende systemer."
@@ -78,7 +79,7 @@ Kommentar: "Slettefunksjonen var grei, men en bekreftelsesmelding er alltid nytt
 Kommentar: "Programmet er funksjonelt og enkelt å bruke. For å forbedre brukeropplevelsen kan det være lurt å vurdere en mer moderne design og noen visuelle forbedringer."
 
 
-### **Gutt 3 (22 år):**
+### **Gutt 3 (17 år):**
 **Legge til ny oppgave:**
 
 Kommentar: "Prosessen for å legge til en ny oppgave var enkel og problemfri. Knappen for å legge til oppgave var godt plassert, og det var en glede å bruke. En super positiv opplevelse!"
@@ -95,7 +96,7 @@ Kommentar: "Slettefunksjonen var grei, og selv om jeg ikke trengte en bekreftels
 
 Kommentar: "Jeg er veldig fornøyd med programmet! Det er allerede en effektiv løsning, men noen små visuelle forbedringer ville gjort det enda bedre. Totalt sett en fantastisk opplevelse!"
 
-### **Gutt 4 (24 år):**
+### **Gutt 4 (19 år):**
 Legge til ny oppgave:
 
 Kommentar: "Prosessen for å legge til en ny oppgave var grei, men hva om det var et 'tips'-ikon som gir en kort forklaring når du holder musepekeren over det? Det ville være nyttig for nye brukere."
@@ -112,6 +113,16 @@ Kommentar: "Slettefunksjonen var grei, men en bekreftelsesmelding ville gi meg e
 
 Kommentar: "Totalt sett er programmet funksjonelt, men det kunne være mer visuelt tiltalende. Legg til litt mer designelementer for å gjøre det mer engasjerende."
 
+#implemintering
+
+fra bruker 2, endret farger på slett og ferdig.
+
+
+## Funksjoner å legge til
+- Bekreft slett knapp
+- Prioriterings knapp
+- Tips ikon
+- Tidsramme funksjon
 
 
 
