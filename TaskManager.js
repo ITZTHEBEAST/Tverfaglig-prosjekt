@@ -8,7 +8,7 @@ clearAll.addEventListener("click", function (e) {
   tasks.forEach(task => {
       task.remove();
       deleteTaskFromDatabase(task.dataset.taskId); // Delete the task from the database
-  });
+});
 
   updateSearchFilter(); // Update search filter after clearing all tasks
   saveTasksToLocalStorage(); // Save tasks to local storage after clearing all tasks
