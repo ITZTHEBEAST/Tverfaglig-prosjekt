@@ -47,34 +47,42 @@ Dette prosjektet er laget for å være brukervennlig og hjelpe deg med å admini
 
 # Brukertesting:
 ### *Gutt (19 år ):*
+**Testdeltakerens navn:** Oscar Krokeide Alsos **Alder:** 17 **Yrkesbakgrunn:** IT-elev
 
-Legge til ny oppgave:
+**Tidligere erfaring med lignende systemer:** Har ingen erfaring med lignende systemer.
+
+
+
+**Legge til ny oppgave:**
 
 Kommentar: "Det var enkelt å legge til en ny oppgave. Jeg fant 'Legg til oppgave'-knappen umiddelbart. Kanskje vurdér å legge til en snarvei for å raskt åpne dette fra hvor som helst."
-Se gjennom oppgaveliste:
+
+**Se gjennom oppgaveliste:**
 
 Kommentar: "Navigeringen var grei, men det ville vært nyttig med en måte å sortere oppgavene på forskjellige måter. Jeg liker å ha dem organisert på dato eller prioritet."
-Slette oppgave:
+
+**Slette oppgave:**
 
 Kommentar: "Prosessen for å slette oppgaver var tydelig, men en bekreftelsesmelding ville være nyttig. Jeg har en tendens til å trykke for raskt, og det er lett å gjøre feil."
-Generelle Spørsmål:
+
+**Generelle Spørsmål:**
 
 Kommentar: "Generelt sett likte jeg programmet. Kanskje legg til noen farger for å gjøre det mer levende. Jeg ville definitivt brukt dette for oppgavehåndtering."
 
 ### *Gutt 2 (18 år):*
-**Legge til ny oppgave:**
+#### **Legge til ny oppgave:**
 
 Kommentar: "Legge til en ny oppgave var enkelt, men det ville vært nyttig med litt mer veiledning, spesielt for nye brukere som ikke er vant til lignende systemer."
 
-**Se gjennom oppgaveliste:**
+#### **Se gjennom oppgaveliste:**
 
 Kommentar: "Navigasjonen var ok, men det ville være praktisk med noen flere filtre eller organisasjonsalternativer for å håndtere mange oppgaver på en mer effektiv måte."
 
-**Slette oppgave:**
+#### **Slette oppgave:**
 
 Kommentar: "Slettefunksjonen var grei, men en bekreftelsesmelding er alltid nyttig for å forhindre feil. Det gir også brukeren en ekstra trygghet."
 
-**Generelle Spørsmål:**
+#### **Generelle Spørsmål:**
 
 Kommentar: "Programmet er funksjonelt og enkelt å bruke. For å forbedre brukeropplevelsen kan det være lurt å vurdere en mer moderne design og noen visuelle forbedringer."
 
