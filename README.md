@@ -46,7 +46,7 @@ Dette prosjektet er laget for å være brukervennlig og hjelpe deg med å admini
 
 
 # Brukertesting:
-### *Gutt (19 år):*
+### *Gutt (19 år ):*
 
 Legge til ny oppgave:
 
@@ -123,7 +123,7 @@ fra bruker 2, endret farger på slett og ferdig.
 - Prioriterings knapp
 - Tips ikon
 - Tidsramme funksjon
-
+- Varsel funksjon
 
 
 
@@ -135,4 +135,6 @@ fra bruker 2, endret farger på slett og ferdig.
 GitHub in Ubuntu - https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
 
 PhP - https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu#step-3-installing-php
+
+Installing SSH vsc - https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client
 
